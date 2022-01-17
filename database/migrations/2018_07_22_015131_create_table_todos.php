@@ -19,7 +19,7 @@ class CreateTableTodos extends Migration
             $table->string('tanggal');
             $table->string('pukul');
             $table->string('tempat');
-            $table->boolean('is_done')->default(false);
+            $table->String('is_done')->default('Not Done');
             $table->timestamps();
         });
     }

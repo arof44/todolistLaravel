@@ -7,8 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Jadwal Kegiatan</div>
                 <div class="panel-body">
-                    <a href="{{ url('todos/create') }}" class="btn btn-primary">Tambah Jadwal Kegiatan</a>
-                    <a href="{{ url('todos/history') }}" class="btn btn-primary">History </a>
+                    <a href="{{ url('/') }}" class="btn btn-primary">Kembali</a>
 
                     <br>
                     <br>
@@ -31,7 +30,7 @@
                             </tr>
                             @endif
                             @foreach($todos as $todo)
-                            @if($todo->is_done == 'Not Done')
+                            @if($todo->is_done == 'Done')
                             <tr>
                                 <td>{{ $todo->kegiatan }}</td>
                                 <td>{{ $todo->tanggal }}</td>
@@ -39,7 +38,7 @@
                                 <td>{{ $todo->tempat }}</td>
                                 <td>{{ $todo->is_done }}</td>
                                 <td>
-                                    <a class="btn btn-warning" href="{{ url('todos/'.$todo->id.'/edit') }}">Edit</a>
+                                    <!-- <a class="btn btn-warning" href="{{ url('todos/'.$todo->id.'/edit') }}">Edit</a> -->
                                     <a class="btn btn-danger" href="{{ url('todos/'.$todo->id.'/delete') }}">Delete</a>
                                 </td>
                             </tr>

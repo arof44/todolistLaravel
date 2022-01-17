@@ -30,12 +30,12 @@
                             <label class="control-label">Is Done</label>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" value="1" name="is_done"> Done
+                                    <input type="radio" value="Done" name="is_done"> Done
                                 </label>
                             </div>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" value="0" name="is_done"> Not Done
+                                    <input type="radio" value="Not Done" name="is_done"> Not Done
                                 </label>
                             </div>
                         </div>

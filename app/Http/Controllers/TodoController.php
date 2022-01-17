@@ -17,6 +17,16 @@ class TodoController extends Controller
         return view ('todos.index', $data);
     }
 
+    public function history()
+    {
+        $todos = Todo::all();
+        $data = [
+            'todos' => $todos
+        ];
+
+        return view('todos.history', $data);
+    }
+
     public function create()
     {
         return view('todos.create');

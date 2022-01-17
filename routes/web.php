@@ -27,6 +27,11 @@ Route::get('/todos/create', 'TodoController@create');
 Route::post('/todos', 'TodoController@store');
 
 /**
+ * history
+ */
+Route::get('/todos/history', 'TodoController@history');
+
+/**
  * Show edit Todo
  */
 Route::get('todos/{todo}/edit', 'TodoController@edit');
