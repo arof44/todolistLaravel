@@ -1,5 +1,4 @@
 @extends('app')
-
 @section('content')
 <div class="container">
     <div class="row">
@@ -15,7 +14,7 @@
                             <input type="text" name="kegiatan" class="form-control">
 
                             <label class="control-label">Tanggal</label>
-                            <input type="text" name="tanggal" class="form-control">
+                            <input type="text" name="tanggal" class="date form-control">
 
                             <label class="control-label">Pukul</label>
                             <input type="text" name="pukul" class="form-control">
@@ -34,4 +33,10 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    $('.date').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+</script>
 @endsection
