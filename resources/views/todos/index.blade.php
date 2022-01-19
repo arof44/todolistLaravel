@@ -39,22 +39,17 @@
                                 <td>{{ $todo->tempat }}</td>
                                 <td>{{ $todo->is_done }}</td>
                                 <td>
-                                    <a class="btn btn-warning" href="{{ url('todos/'.$todo->id.'/edit') }}">Edit</a>
-                                    <a class="btn btn-danger" href="{{ url('todos/'.$todo->id.'/delete') }}">Delete</a>
                                     <form method="post" action="{{ url('/status/'. $todo->id) }}">
                                         {{ csrf_field() }}
                                         {{ method_field('put') }}
-                                        <div class="form-group">
-                                            <button type="input" value="Done" name="is_done" class="btn btn-success">Update Status</button>
-                                        </div>
+                                        <button type="input" value="Done" name="is_done" class="btn btn-success">Update Status</button>
                                     </form>
+                                    <a class="btn btn-warning" href="{{ url('todos/'.$todo->id.'/edit') }}">Edit</a>
+                                    <a class="btn btn-danger" href="{{ url('todos/'.$todo->id.'/delete') }}">Delete</a>
                                 </td>
                             </tr>
                         </table>
                     </div>
-                    </form>
-                    </td>
-                    </tr>
                     @endif
                     @endforeach
                     </table>

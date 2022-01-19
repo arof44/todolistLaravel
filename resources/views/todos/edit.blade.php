@@ -25,23 +25,9 @@
                             <label class="control-label">Tempat</label>
                             <input type="text" name="tempat" class="form-control" value="{{ $todo->tempat }}">
                         </div>
-
                         <div class="form-group">
-                            <label class="control-label">Is Done</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" value="Done" name="is_done"> Done
-                                </label>
-                            </div>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" value="Not Done" name="is_done"> Not Done
-                                </label>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Update Todo</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <a href="{{ url('/') }}" class="btn btn-primary">Back</a>
                         </div>
                     </form>
                 </div>

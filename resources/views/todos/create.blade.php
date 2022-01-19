@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-4 col-md-offset-4">
             <div class="panel panel-default">
-                <div class="panel-heading">Todo List</div>
+                <div class="panel-heading">Jadwal Kegiatan</div>
                 <div class="panel-body">
                     <form role="form" method="post" action="{{ url('/todos') }}">
                         {{ csrf_field() }}
