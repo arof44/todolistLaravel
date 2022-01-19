@@ -7,7 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Jadwal Kegiatan</div>
                 <div class="panel-body">
-                    <a href="{{ url('/') }}" class="btn btn-primary">Kembali</a>
+                    <a href="{{ url('/') }}" class="btn btn-primary">Back</a>
 
                     <br>
                     <br>

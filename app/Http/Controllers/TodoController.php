@@ -57,4 +57,11 @@ class TodoController extends Controller
 
         return redirect('/');
     }
+
+    public function status(Request $request, Todo $todo)
+    {
+        $todo->update($request->all());
+
+        return redirect('/');
+    }
 }

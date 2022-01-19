@@ -42,6 +42,11 @@ Route::get('todos/{todo}/edit', 'TodoController@edit');
 Route::put('todos/{todo}', 'TodoController@update');
 
 /**
+ * Update Status
+ */
+Route::put('status/{todo}', 'TodoController@status');
+
+/**
  * Delete Todo
  */
 Route::get('/todos/{todo}/delete', 'TodoController@delete');

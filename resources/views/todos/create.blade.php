@@ -25,7 +25,8 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Add Todos</button>
+                            <button type="submit" class="btn btn-primary">Tambah Jadwal</button>
+                            <a href="{{ url('/') }}" class="btn btn-primary">Back</a>
                         </div>
                     </form>
                 </div>
