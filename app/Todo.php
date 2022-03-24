@@ -8,5 +8,5 @@ class Todo extends Model
 {
     protected $table = 'todos';
 
-    public $fillable = ['kegiatan', 'is_done', 'tanggal', 'pukul', 'tempat'];
+    public $fillable = ['kegiatan', 'is_done', 'tanggal', 'pukul', 'tempat', 'surat'];
 }

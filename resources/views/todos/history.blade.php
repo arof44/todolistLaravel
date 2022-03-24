@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-xl-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Jadwal Kegiatan</div>
+                <div class="panel-heading">Riwayat</div>
                 <div class="panel-body">
-                    <a href="{{ url('/') }}" class="btn btn-primary">Back</a>
+                    <a href="{{ url('/') }}" class="btn btn-primary">Kembali</a>
 
                     <br>
                     <br>
@@ -16,22 +16,24 @@
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
+                                <th>Surat</th>
                                 <th>Kegiatan</th>
                                 <th>Tanggal</th>
                                 <th>Pukul</th>
                                 <th>Tempat</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Aksi</th>
                             </tr>
 
                             @if(! count($todos))
                             <tr>
-                                <td colspan="3">No Todo</td>
+                                <td colspan="6">Belum Ada Kegiatan</td>
                             </tr>
                             @endif
                             @foreach($todos as $todo)
-                            @if($todo->is_done == 'Done')
+                            @if($todo->is_done == 'Selesai')
                             <tr>
+                                <td>{{ $todo->surat }}</td>
                                 <td>{{ $todo->kegiatan }}</td>
                                 <td>{{ $todo->tanggal }}</td>
                                 <td>{{ $todo->pukul }}</td>

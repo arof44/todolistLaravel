@@ -3,9 +3,9 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-4 col-md-offset-4">
+        <div class="col-xl-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Todo List</div>
+                <div class="panel-heading">Edit Jadwal Kegiatan</div>
                 <div class="panel-body">
                     <form role="form" method="post" action="{{ url('/todos/'. $todo->id) }}">
                         {{ csrf_field() }}
@@ -17,7 +17,7 @@
                             <input type="text" name="kegiatan" class="form-control" value="{{ $todo->kegiatan }}">
 
                             <label class="control-label">Tanggal</label>
-                            <input type="text" name="tanggal" class="form-control" value="{{ $todo->tanggal }}">
+                            <input type="text" name="tanggal" class="date form-control" value="{{ $todo->tanggal }}">
 
                             <label class="control-label">Pukul</label>
                             <input type="text" name="pukul" class="form-control" value="{{ $todo->pukul }}">
@@ -35,4 +35,9 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $('.date').datepicker({
+        format: 'dd-mm-yyyy'
+    });
+</script>
 @endsection
